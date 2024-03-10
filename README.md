@@ -14,8 +14,13 @@ simple listing apartments app that allow the user to see more details about each
 
 ## Running Procedure
 - Clone the project.
+- Currently I fixed the problem of Docker file naming, so could start the application with docker-compose up.
+
+## Another Running Procedure
+- Clone the project.
 - Install dependencies.
-- Docker currently not configured due to shortage in time, so now you could run the application by:
+- **Backend Host in Mobile application**: I'm using my local device ip address, to call endpoint from backend so make sure changing it.
+- you could run the application by:
     - into backend npm run dev
     - into frontend npm run dev
     - into mobile npx react-native start
