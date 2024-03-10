@@ -14,8 +14,12 @@ simple listing apartments app that allow the user to see more details about each
 
 ## Running Procedure
 - Clone the project.
-- Run MachineApplciation.java in vending-machine\src\main\java\com\vendor\machine\MachineApplication.java.
-- Test the API with Swagger: [Swagger UI](http://localhost:8080/swagger-ui/index.html#/)
+- Install dependencies.
+- Docker currently not configured due to shortage in time, so now you could run the application by:
+    - into backend npm run dev
+    - into frontend npm run dev
+    - into mobile npx react-native start
+
 
 
 ## Backend
