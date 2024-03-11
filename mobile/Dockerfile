@@ -1,16 +1,21 @@
-# Use the official Node.js image with version 20.11.1
+# Use official Node.js image as the base image
 FROM node:20.11.1
 
-# Set working directory
+# Set the working directory inside the container
 WORKDIR /app
 
-# Install Expo CLI globally
-RUN npm install -g expo-cli
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
 
-# Expose port
-EXPOSE 19000
-EXPOSE 19001
-EXPOSE 19002
+# Install dependencies
+RUN npm install -g react-native-cli
+RUN npm install
 
-# Command to start the React Native packager
-CMD ["npm", "start"]
+# Copy the rest of the application code to the container
+COPY . .
+
+# Expose the default port used by React Native development server
+EXPOSE 8081
+
+# Command to start the React Native development server
+CMD ["npx", "react-native", "start"]

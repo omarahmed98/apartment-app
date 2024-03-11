@@ -22,7 +22,7 @@ const ApartmentListingPage = () => {
 
   const fetchApartments = async () => {
     try {
-      const response = await fetch('http://192.168.1.8:3000/apartments');
+      const response = await fetch('http://172.29.224.1:3000/apartments');
       const data = await response.json();
       setApartments(data);
     } catch (error) {
